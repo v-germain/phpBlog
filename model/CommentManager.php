@@ -20,4 +20,12 @@ class CommentManager extends Manager
         
         return $affectedLines;
     }
+
+    public function reportComment()
+    {
+        $db = $this->dbConnect();
+        $req = $db->query('UPDATE comments(reported) VALUES(?) NOW(1)');
+        $req->execute(array());
+        echo "Votre signalement a bien été pris en compte.";
+    }
 }

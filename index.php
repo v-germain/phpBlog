@@ -27,6 +27,10 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
+        elseif ($_GET['action'] == 'admin') {
+            require('controller/backend.php');
+            getReportedComment();
+        }
     }
     else {
         listPosts();
