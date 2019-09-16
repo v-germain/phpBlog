@@ -29,6 +29,7 @@
         <p><?= nl2br(htmlspecialchars($data['comment'])) ?></p>
         <?php $id = $data['id']; 
         echo("<a href=\"index.php?action=removeComment&idPost=$id\"> Supprimer</a>");
+        echo("<a href=\"index.php?action=restoreComment&idPost=$id\"> Restaurer</a>");
         ?>
 
 <?php

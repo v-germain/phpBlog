@@ -17,6 +17,13 @@ function removeComment($postid)
     require('view/frontend/adminView.php');
 }
 
+function restoreComment($postid)
+{
+    $adminManager = new AdminManager();
+    $restoreComment = $adminManager->restoreComment($postid);
+    require('view/frontend/adminView.php');
+}
+
 function addPost($title, $content)
 {
    $adminManager = new AdminManager();
@@ -28,5 +35,4 @@ function addPost($title, $content)
    else {
         header('Location: index.php');
    }
-
 }

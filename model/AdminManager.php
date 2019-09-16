@@ -30,11 +30,13 @@ class AdminManager extends Manager
         header('Location: index.php?action=admin');
     }
 
-    public function restoreReportedComment($postid)
+    public function restoreComment($postid)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('UPDATE FROM comments(reported) VALUES(?) NOW(0)');
+        $restoreComment = $db->prepare('UPDATE comments SET reported = 0 WHERE reported = 1 AND id = ?');
+        //$restoreComment = $db->prepare('UPDATE FROM comments(reported) VALUES(?) NOW(0)');
         
-        $req->execute(array($postid));
+        $restoreComment->execute(array($postid));
+        header('Location: index.php?action=admin');
     }
 }
