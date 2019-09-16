@@ -35,8 +35,9 @@ try {
             require('controller/backend.php');
             removeComment($_GET['idPost']);
         }
-        elseif ($_GET['action'] == 'addPost') { // TO DO
+        elseif ($_GET['action'] == 'createPost') {
             if (!empty($_POST['title']) && !empty($_POST['content'])) {
+                require('controller/backend.php');
                 addPost($_POST['title'], $_POST['content']);
             }
             else {

@@ -26,7 +26,7 @@ function addPost($title, $content)
        throw new Exception('Impossible de publier ce billet');
    }
    else {
-        header('Location: index.php'); // TO DO
+        header('Location: index.php');
    }
 
 }
