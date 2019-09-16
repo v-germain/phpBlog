@@ -37,6 +37,9 @@
         ?>
             <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+            <?php $id = $comment['id']; 
+            echo("<a href=\"index.php?action=reportComment&idPost=$id\"> Signaler</a>");
+        ?>
     <?php
     }
     ?>

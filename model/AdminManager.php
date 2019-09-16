@@ -21,22 +21,21 @@ class AdminManager extends Manager
         return $getReportedComment;
     }
 
-    public function removeComment($postid)
+    public function removeComment($postId)
     {
         $db = $this->dbConnect();
         $removeComment = $db->prepare('DELETE FROM comments WHERE id =? AND reported=1');
 
-        $removeComment->execute(array($postid));
+        $removeComment->execute(array($postId));
         header('Location: index.php?action=admin');
     }
 
-    public function restoreComment($postid)
+    public function restoreComment($postId)
     {
         $db = $this->dbConnect();
         $restoreComment = $db->prepare('UPDATE comments SET reported = 0 WHERE reported = 1 AND id = ?');
-        //$restoreComment = $db->prepare('UPDATE FROM comments(reported) VALUES(?) NOW(0)');
         
-        $restoreComment->execute(array($postid));
+        $restoreComment->execute(array($postId));
         header('Location: index.php?action=admin');
     }
 }

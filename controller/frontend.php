@@ -21,6 +21,7 @@ function post()
 
     require('view/frontend/postView.php');
 }
+
 function addComment($postId, $author, $comment)
 {
     $commentManager = new CommentManager();
@@ -32,5 +33,15 @@ function addComment($postId, $author, $comment)
     else {
         header('Location: index.php?action=post&id=' . $postId);
     }
+}
+
+function reportComment($postId)
+{
+    $commentManager = new CommentManager();
+    $reportComment = $commentManager->reportComment($postId);
+
+    header('Location: index.php');
+    // TO DO remplacer location-index par location-post
+    //header('Location: index.php?action=post&id=' . $postId);
 }
 
