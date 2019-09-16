@@ -24,7 +24,6 @@ function post()
 function addComment($postId, $author, $comment)
 {
     $commentManager = new CommentManager();
-    
     $affectedLines = $commentManager->postComment($postId, $author, $comment);
 
     if ($affectedLines === false) {

@@ -31,6 +31,18 @@ try {
             require('controller/backend.php');
             getReportedComment();
         }
+        elseif ($_GET['action'] == 'removeComment') {
+            require('controller/backend.php');
+            removeComment($_GET['idPost']);
+        }
+        elseif ($_GET['action'] == 'addPost') { // TO DO
+            if (!empty($_POST['title']) && !empty($_POST['content'])) {
+                addPost($_POST['title'], $_POST['content']);
+            }
+            else {
+                throw new Exception('Tous les champs ne sont pas remplis !');
+            }
+        }
     }
     else {
         listPosts();
