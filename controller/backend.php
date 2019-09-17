@@ -39,3 +39,11 @@ function addPost($title, $content)
         header('Location: index.php');
    }
 }
+
+function viewPost()
+{
+    $adminManager = new AdminManager();
+    $post = $adminManager->getAdminPost($_GET['id']);
+
+    require('view/frontend/AdminPostView.php');
+}

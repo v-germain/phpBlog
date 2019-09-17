@@ -13,6 +13,7 @@
                 </h4>
                 <p>
                     <?= nl2br(htmlspecialchars($data2['content'])) ?>
+                    <em><a href="index.php?action=adminPostView&amp;id=<?= $data2['id'] ?>">Editer</a></em>
                 </p>
             </div>
     <?php

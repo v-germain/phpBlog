@@ -31,10 +31,7 @@ try {
         }
         elseif ($_GET['action'] == 'admin') {
             require('controller/backend.php');
-            getAdminContent();
-            //getAdminPosts();
-            //getReportedComment();
-            
+            getAdminContent();    
         }
         elseif ($_GET['action'] == 'removeComment') {
             require('controller/backend.php');
@@ -51,6 +48,16 @@ try {
             }
             else {
                 throw new Exception('Tous les champs ne sont pas remplis !');
+            }
+        }
+        elseif ($_GET['action'] == 'adminPostView') {
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                require('controller/backend.php');
+                echo 'toto';
+                viewPost();
+            }
+            else {
+                throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
     }

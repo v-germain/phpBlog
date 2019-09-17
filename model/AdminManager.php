@@ -46,4 +46,14 @@ class AdminManager extends Manager
 
         return $getAdminPosts;
     }
+
+    public function getAdminPost($postId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('SELECT id, title, content, creation_date FROM posts WHERE id = ?');
+        $req->execute(array($postId));
+        $post = $req->fetch();
+
+        return $post;
+    }
 }
