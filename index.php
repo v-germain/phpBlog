@@ -1,6 +1,5 @@
 <?php
 require('controller/frontend.php');
-
 try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'listPosts') {
@@ -32,7 +31,10 @@ try {
         }
         elseif ($_GET['action'] == 'admin') {
             require('controller/backend.php');
-            getReportedComment();
+            getAdminContent();
+            //getAdminPosts();
+            //getReportedComment();
+            
         }
         elseif ($_GET['action'] == 'removeComment') {
             require('controller/backend.php');

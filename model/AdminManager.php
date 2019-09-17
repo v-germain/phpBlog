@@ -38,4 +38,12 @@ class AdminManager extends Manager
         $restoreComment->execute(array($postId));
         header('Location: index.php?action=admin');
     }
+
+    public function getAdminPosts()
+    {
+        $db = $this->dbConnect();
+        $getAdminPosts = $db->query('SELECT id, title, content, creation_date FROM posts ORDER BY creation_date DESC');
+
+        return $getAdminPosts;
+    }
 }
