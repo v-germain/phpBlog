@@ -41,6 +41,10 @@ try {
             require('controller/backend.php');
             restoreComment($_GET['idPost']);
         }
+        elseif ($_GET['action'] == 'removePost') {
+            require('controller/backend.php');
+            removePost($_GET['idPost']);
+        }
         elseif ($_GET['action'] == 'createPost') {
             if (!empty($_POST['title']) && !empty($_POST['content'])) {
                 require('controller/backend.php');

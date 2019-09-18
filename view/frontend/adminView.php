@@ -29,7 +29,7 @@
         
         <div>
             <label for="content">Contenu</label><br />
-            <textarea id="tinytextarea" name="content" ></textarea>
+            <textarea class="tinytextarea" id="content" name="content" ></textarea>
         </div>
         <div>
             <input type="submit" />

@@ -56,4 +56,13 @@ class AdminManager extends Manager
 
         return $post;
     }
+
+    public function removePost($postId)
+    {
+        $db = $this->dbConnect();
+        $removePost = $db->prepare('DELETE FROM posts WHERE id =?');
+
+        $removePost->execute(array($postId));
+        header('Location: index.php?action=admin');
+    }
 }

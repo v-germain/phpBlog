@@ -47,3 +47,11 @@ function viewPost()
 
     require('view/frontend/AdminPostView.php');
 }
+
+function removePost($postid)
+{
+    $adminManager = new AdminManager();
+    $removePost = $adminManager->removePost($postid);
+
+    require('view/frontend/adminPostView.php');
+}
