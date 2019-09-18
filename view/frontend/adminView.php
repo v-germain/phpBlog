@@ -12,7 +12,7 @@
                     <em>le <?= $data2['creation_date'] ?></em>
                 </h4>
                 <p>
-                    <?= nl2br(htmlspecialchars($data2['content'])) ?>
+                    <?= nl2br(/*htmlspecialchars*/($data2['content'])) ?>
                     <em><a href="index.php?action=adminPostView&amp;id=<?= $data2['id'] ?>">Editer</a></em>
                 </p>
             </div>
@@ -29,7 +29,7 @@
         
         <div>
             <label for="content">Contenu</label><br />
-            <textarea id="content" name="content" ></textarea>
+            <textarea id="tinytextarea" name="content" ></textarea>
         </div>
         <div>
             <input type="submit" />
