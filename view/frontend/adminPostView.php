@@ -11,12 +11,12 @@
         <?= nl2br(/*htmlspecialchars*/($post['content'])) ?>
     </p>
 </div>
-
-<form action="index.php?action=createPost" method="post">
-    <div>
+<?php $id = $post['id']; ?>
+<form action="index.php?action=editPost&idPost=$id" method="post">
+    <!--<div>
         <label for="title">Titre</label><br />
     </div>
-    <input type="text" id="title" name="title" />
+    <input type="text" id="title" name="title" />-->
 
     <div>
         <label for="content">Contenu</label><br />
@@ -28,7 +28,8 @@
     <div>
         <input type="submit" />
         <?php $id = $post['id'];
-        echo("<a href=\"index.php?action=removePost&idPost=$id\"> Supprimer</a>"); ?>
+        echo("<a href=\"index.php?action=removePost&idPost=$id\"> Supprimer</a>"); 
+        //echo("<a href=\"index.php?action=editPost&idPost=$id\"> Editer</a>"); ?>
     </div>
 </form>
 

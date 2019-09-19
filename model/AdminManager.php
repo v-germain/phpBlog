@@ -65,4 +65,13 @@ class AdminManager extends Manager
         $removePost->execute(array($postId));
         header('Location: index.php?action=admin');
     }
+
+    public function editPost($postid)
+    {
+        $db = $this->dbConnect();
+        $editPost = $db->prepare('UPDATE posts SET content WHERE id = ?');
+
+        $editPost->execute(array($postid));
+        header('Location: index.php?action=admin');
+    }
 }

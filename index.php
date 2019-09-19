@@ -45,6 +45,10 @@ try {
             require('controller/backend.php');
             removePost($_GET['idPost']);
         }
+        elseif ($_GET['action'] == 'editPost') {
+            require('controller/backend.php');
+            editPost($_GET['idPost']);
+        }
         elseif ($_GET['action'] == 'createPost') {
             if (!empty($_POST['title']) && !empty($_POST['content'])) {
                 require('controller/backend.php');
@@ -57,7 +61,6 @@ try {
         elseif ($_GET['action'] == 'adminPostView') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 require('controller/backend.php');
-                echo 'toto';
                 viewPost();
             }
             else {

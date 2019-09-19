@@ -55,3 +55,11 @@ function removePost($postid)
 
     require('view/frontend/adminPostView.php');
 }
+
+function editPost($postid)
+{
+    $adminManager = new AdminManager();
+    $editPost = $adminManager->editPost($postid);
+
+    require('view/frontend/adminPostView.php');
+}
