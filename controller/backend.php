@@ -56,10 +56,10 @@ function removePost($postid)
     require('view/frontend/adminPostView.php');
 }
 
-function editPost($postid)
+function editPost($postid, $newTitle, $newContent)
 {
     $adminManager = new AdminManager();
-    $editPost = $adminManager->editPost($postid);
+    $editPost = $adminManager->editPost($postid, $newTitle, $newContent);
 
     require('view/frontend/adminPostView.php');
 }

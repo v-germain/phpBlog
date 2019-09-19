@@ -47,7 +47,8 @@ try {
         }
         elseif ($_GET['action'] == 'editPost') {
             require('controller/backend.php');
-            editPost($_GET['idPost']);
+            echo $_GET['idPost'], $_POST['content'], $_POST['title'];
+            editPost($_GET['idPost'], $_POST['title'] , $_POST['content']);
         }
         elseif ($_GET['action'] == 'createPost') {
             if (!empty($_POST['title']) && !empty($_POST['content'])) {

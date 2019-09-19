@@ -11,25 +11,25 @@
         <?= nl2br(/*htmlspecialchars*/($post['content'])) ?>
     </p>
 </div>
+
 <?php $id = $post['id']; ?>
-<form action="index.php?action=editPost&idPost=$id" method="post">
-    <!--<div>
+
+<form action="index.php?action=editPost&idPost=<?php echo $id; ?>" method="post">
+    <div>
         <label for="title">Titre</label><br />
     </div>
-    <input type="text" id="title" name="title" />-->
+    <input type="text" id="title" name="title" />
 
     <div>
         <label for="content">Contenu</label><br />
-        <!--<textarea class="tinytextarea" id="content" name="content">
-             //nl2br(htmlspecialchars($post['content'])) 
-        </textarea>-->
-        <?php echo '<textarea name="content" id="content" class="tinytextarea">'.($post['content']).'</textarea>'; ?>
+        <?php echo '<textarea name="content" id="content" class="tinytextarea" >'.($post['content']).'</textarea>'; ?>
     </div>
     <div>
         <input type="submit" />
+    </div>
+    <div>
         <?php $id = $post['id'];
-        echo("<a href=\"index.php?action=removePost&idPost=$id\"> Supprimer</a>"); 
-        //echo("<a href=\"index.php?action=editPost&idPost=$id\"> Editer</a>"); ?>
+        echo("<a href=\"index.php?action=removePost&idPost=$id\"> Supprimer</a>"); ?>
     </div>
 </form>
 
