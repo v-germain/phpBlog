@@ -8,7 +8,7 @@ function getAdminContent()
     $getReportedComment = $adminManager->getReportedComment();
     $getAdminPosts = $adminManager->getAdminPosts();
 
-    require('view/frontend/adminView.php');
+    require('view/backend/adminView.php');
 }
 
 function removeComment($postid)
@@ -16,7 +16,7 @@ function removeComment($postid)
     $adminManager = new AdminManager();
     $removeComment = $adminManager->removeComment($postid);
 
-    require('view/frontend/adminView.php');
+    require('view/backend/adminView.php');
 }
 
 function restoreComment($postid)
@@ -24,7 +24,7 @@ function restoreComment($postid)
     $adminManager = new AdminManager();
     $restoreComment = $adminManager->restoreComment($postid);
 
-    require('view/frontend/adminView.php');
+    require('view/backend/adminView.php');
 }
 
 function addPost($title, $content)
@@ -45,7 +45,7 @@ function viewPost()
     $adminManager = new AdminManager();
     $post = $adminManager->getAdminPost($_GET['id']);
 
-    require('view/frontend/AdminPostView.php');
+    require('view/backend/AdminPostView.php');
 }
 
 function removePost($postid)
@@ -53,7 +53,7 @@ function removePost($postid)
     $adminManager = new AdminManager();
     $removePost = $adminManager->removePost($postid);
 
-    require('view/frontend/adminPostView.php');
+    require('view/backend/adminPostView.php');
 }
 
 function editPost($postid, $newTitle, $newContent)
@@ -61,5 +61,5 @@ function editPost($postid, $newTitle, $newContent)
     $adminManager = new AdminManager();
     $editPost = $adminManager->editPost($postid, $newTitle, $newContent);
 
-    require('view/frontend/adminPostView.php');
+    require('view/backend/adminPostView.php');
 }

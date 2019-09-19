@@ -18,7 +18,7 @@
     <div>
         <label for="title">Titre</label><br />
     </div>
-    <input type="text" id="title" name="title" />
+    <input type="text" id="title" name="title" value="<?php echo($post['title']); ?>">
 
     <div>
         <label for="content">Contenu</label><br />
@@ -34,4 +34,4 @@
 </form>
 
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('adminTemplate.php'); ?>

@@ -1,4 +1,4 @@
 AuthName "Veuillez vous connecter"
 AuthType Basic
-AuthUserFile "C:/wamp/www/project/admin/.htpasswd"
+AuthUserFile "C:\wamp\www\project\view\backend\.htpasswd"
 Require valid-user
