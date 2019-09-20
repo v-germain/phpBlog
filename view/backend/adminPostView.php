@@ -25,11 +25,11 @@
         <?php echo '<textarea name="content" id="content" class="tinytextarea" >'.($post['content']).'</textarea>'; ?>
     </div>
     <div>
-        <input type="submit" />
+        <input type="submit" class="btn btn-primary" />
     </div>
     <div>
         <?php $id = $post['id'];
-        echo("<a href=\"index.php?action=removePost&idPost=$id\"> Supprimer</a>"); ?>
+        echo("<a class='btn btn-primary' href=\"index.php?action=removePost&idPost=$id\"> Supprimer</a>"); ?>
     </div>
 </form>
 

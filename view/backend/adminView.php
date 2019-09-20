@@ -13,7 +13,7 @@
                 </h4>
                 <p>
                     <?= nl2br(/*htmlspecialchars*/($data2['content'])) ?><br />
-                    <em><a href="index.php?action=adminPostView&amp;id=<?= $data2['id'] ?>">Editer</a></em>
+                    <em><a class="btn btn-primary" href="index.php?action=adminPostView&amp;id=<?= $data2['id'] ?>">Editer</a></em>
                 </p>
             </div>
     <?php
@@ -32,7 +32,7 @@
             <textarea class="tinytextarea" id="content" name="content" ></textarea>
         </div>
         <div>
-            <input type="submit" />
+            <input type="submit" class="btn btn-primary"/>
         </div>
     </form>
 
@@ -45,8 +45,8 @@
         <p><strong><?= htmlspecialchars($data['author']) ?></strong> publié le <?= $data['comment_date'] ?></p>
         <p><?= nl2br(htmlspecialchars($data['comment'])) ?></p>
         <?php $id = $data['id']; 
-        echo("<a href=\"index.php?action=removeComment&idPost=$id\"> Supprimer</a>");
-        echo("<a href=\"index.php?action=restoreComment&idPost=$id\"> Restaurer</a>");
+        echo("<a class='btn btn-primary' href=\"index.php?action=removeComment&idPost=$id\"> Supprimer</a>");
+        echo("<a class='btn btn-primary' href=\"index.php?action=restoreComment&idPost=$id\"> Restaurer</a>");
     }
 $getReportedComment->closeCursor();    
 ?>

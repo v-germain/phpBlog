@@ -8,6 +8,10 @@ header {
     width: 100%;
 }
 
+div.head {
+    text-align: center;
+}
+
 div.banner {
     background-image: url("../images/banner.jpg");
     background-repeat: no-repeat;
@@ -37,6 +41,7 @@ div.card {
 
 div.post_container {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    justify-content: center;
 }
 

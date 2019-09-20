@@ -27,7 +27,9 @@ try {
             }
         }
         elseif ($_GET['action'] == 'reportComment') {
+            echo 'tata';
             reportComment($_GET['idPost']);
+            echo 'toto';
         }
         elseif ($_GET['action'] == 'admin') {
             require('controller/backend.php');
