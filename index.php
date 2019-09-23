@@ -1,5 +1,5 @@
 <?php
-require('controller/frontend.php');
+require('controller/frontend.php'); //a répartir dans if/elseif
 try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'listPosts') {
@@ -27,9 +27,7 @@ try {
             }
         }
         elseif ($_GET['action'] == 'reportComment') {
-            echo 'tata';
             reportComment($_GET['idPost']);
-            echo 'toto';
         }
         elseif ($_GET['action'] == 'admin') {
             require('controller/backend.php');
@@ -49,7 +47,6 @@ try {
         }
         elseif ($_GET['action'] == 'editPost') {
             require('controller/backend.php');
-            echo $_GET['idPost'], $_POST['content'], $_POST['title'];
             editPost($_GET['idPost'], $_POST['title'] , $_POST['content']);
         }
         elseif ($_GET['action'] == 'createPost') {

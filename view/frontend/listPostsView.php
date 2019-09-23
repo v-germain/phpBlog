@@ -16,10 +16,10 @@
         <div class="card" style="width: 18rem;">
             <img src="public/images/ch<?= $data['id'] ?>.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h3 class="card-title"> <?= htmlspecialchars($data['title']) ?></h3>
-                <p class="card-text"> <?= nl2br(/*htmlspecialchars*/($data['content'])) ?> <br />
+            <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="title" > <?= htmlspecialchars($data['title']) ?> </a>
+                <p class="card-text"> <?= substr($data['content'], 0, 400) ?> (...) <br />
                     <em>le <?= $data['creation_date_fr'] ?></em></p>
-                <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Commentaires</a>
+                <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Lire la suite</a>
             </div>
         </div>
     <?php

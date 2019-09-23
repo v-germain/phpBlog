@@ -10,40 +10,25 @@ class Admin {
 
     displayList() {
         this.toggleList.addEventListener("click", () => {
-            this.list.style.display="block";
-            this.post.style.display="none";
-            this.comment.style.display="none";
+            this.list.style.display = "block";
+            this.post.style.display = "none";
+            this.comment.style.display = "none";
         });
-        /*document.getElementById("toggleList").addEventListener("click", () => {
-            document.getElementById("postView").style.display="block";
-            document.getElementById("createPost").style.display="none";
-            document.getElementById("commentMod").style.display="none";
-        });*/
     }
 
     displayPost() {
         this.toggleNew.addEventListener("click", () => {
-            this.list.style.display="none";
-            this.post.style.display="block";
-            this.comment.style.display="none";
+            this.list.style.display = "none";
+            this.post.style.display = "block";
+            this.comment.style.display = "none";
         });
-        /*document.getElementById("toggleNew").addEventListener("click", () => {
-            document.getElementById("postView").style.display="none";
-            document.getElementById("createPost").style.display="block";
-            document.getElementById("commentMod").style.display="none";
-        });*/
     }
 
     displayComment() {
         this.toggleComment.addEventListener("click", () => {
-            this.list.style.display="none";
-            this.post.style.display="none";
-            this.comment.style.display="block";
+            this.list.style.display = "none";
+            this.post.style.display = "none";
+            this.comment.style.display = "flex";
         });
-        /*document.getElementById("toggleComment").addEventListener("click", () => {
-            document.getElementById("postView").style.display="none";
-            document.getElementById("createPost").style.display="none";
-            document.getElementById("commentMod").style.display="block";
-        });*/
     }
 }

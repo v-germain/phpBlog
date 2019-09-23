@@ -24,7 +24,7 @@ div.banner {
     justify-content: center;
     flex-direction: column;
     color: white;
-    text-shadow: 0 0 3px black; 
+    text-shadow: 1px 0 1px black; 
 }
 
 nav {
@@ -37,6 +37,13 @@ div.card {
     border-color: #D6BABE;
     margin: 25px;
     width: 40%!important;
+    background-color: aliceblue;
+    color: black;
+    text-shadow: none;
+}
+
+a.title {
+    font-size: x-large;
 }
 
 div.post_container {
@@ -45,3 +52,71 @@ div.post_container {
     justify-content: center;
 }
 
+div.card {
+    padding: 5px;
+}
+
+.top {
+    text-align: center;
+}
+
+form {
+    border: 2px solid white;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 25px auto;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #52728E, #2E6589 , #173244);
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    align-items: center;
+}
+
+#commentMod {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    align-items: center;
+}
+
+.comment {
+    margin: 5px;
+    padding: 5px;
+    width: 70%;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #52728E, #2E6589 , #173244);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submitBtn {
+    margin: 10px;
+}
+
+p.alert.alert-light {
+    text-shadow: none;
+}
+
+a.btn.btn-danger {
+    float: right;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
