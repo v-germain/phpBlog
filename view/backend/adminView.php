@@ -52,7 +52,7 @@
             <textarea class="tinytextarea" id="content" name="content"></textarea>
         </div>
         <div>
-            <input type="submit" class="btn btn-primary" id="submitBtn" />
+            <input type="submit" class="btn btn-primary submitBtn"/>
         </div>
     </form>
 

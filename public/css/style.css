@@ -101,7 +101,7 @@ form {
     align-items: center;
 }
 
-#submitBtn {
+.submitBtn {
     margin: 10px;
 }
 
