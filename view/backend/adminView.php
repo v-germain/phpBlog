@@ -81,8 +81,8 @@
 
 </section>
 
-<script src="./public/js/admin.js"></script>
-<script src="./public/js/init.js"></script>
+<script src="../../public/js/admin.js"></script>
+<script src="../../public/js/init.js"></script>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('adminTemplate.php'); ?>

@@ -3,8 +3,8 @@
 <?php ob_start(); ?>
 
 <div class="head">
-    <h1>Mon super blog !</h1>
-    <p>Derniers billets du blog :</p>
+    <h3>Suivez l'écriture du livre au rythme de l'écrivain!</h1>
+    <p>Les chapitres :</p>
 </div>
 
 <div class="post_container">
@@ -13,7 +13,7 @@
     while ($data = $posts->fetch()) {
         ?>
 
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 35rem;">
             <img src="public/images/ch<?= $data['id'] ?>.jpg" class="card-img-top" alt="...">
             <div class="card-body">
             <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="title" > <?= htmlspecialchars($data['title']) ?> </a>

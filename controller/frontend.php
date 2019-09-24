@@ -40,8 +40,7 @@ function reportComment($postId)
     $commentManager = new CommentManager();
     $reportComment = $commentManager->reportComment($postId);
 
-    //header('Location: index.php');
-    // TO DO remplacer location-index par location-post
-    //header('Location: index.php?action=post&id=' . $postId);
+    header('Location: '.$_SERVER['PHP_SELF']);
+    die;
 }
 

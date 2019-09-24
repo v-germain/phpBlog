@@ -25,6 +25,8 @@ div.banner {
     flex-direction: column;
     color: white;
     text-shadow: 1px 0 1px black; 
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
 }
 
 nav {
@@ -36,7 +38,6 @@ nav {
 div.card {
     border-color: #D6BABE;
     margin: 25px;
-    width: 40%!important;
     background-color: aliceblue;
     color: black;
     text-shadow: none;
@@ -113,10 +114,35 @@ a.btn.btn-danger {
     float: right;
 }
 
-.block {
-    display: block;
+footer {
+    background-color: #173244;
+    width: 100%;
+    padding: 10px;
+    border-top: 2px solid white;
 }
 
-.none {
-    display: none;
+#portrait {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 10rem;
+    height: 250px;
+    border: 1px solid white;
+    background-image: url("../images/jfr.jpg");
+    margin-right: 15px;
+}
+
+.desc {
+    display: flex;
+    justify-content: center;
+}
+
+p.desc {
+    width: 35rem;
+    align-items: center;
+}
+
+#credits {
+    font-size: xx-small;
+    margin-bottom: 0px;
 }

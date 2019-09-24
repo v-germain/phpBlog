@@ -15,15 +15,13 @@
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.php">Acceuil</a>
+        <a class="navbar-brand" href="index.php">Accueil</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <!--<a class="nav-item nav-link active" href="index.php">Acceuil<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>-->
-                <a class="nav-item nav-link" href="index.php?action=admin">Connexion</a>
+                <a class="nav-item nav-link" href="view/backend/router.php?action=admin">Administration</a>
             </div>
         </div>
     </nav>
@@ -37,6 +35,12 @@
 <body>
     <?= $content ?>
 </body>
-<footer></footer>
+<footer>
+    <div class="desc">
+    <div id="portrait"><p id="credits">Image par <a href="https://pixabay.com/fr/users/omaralnahi-891511/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=696884">omer yousief</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=696884">Pixabay</a></p></div>
+    <p class="desc">Qui est Jean Forteroche? Né en 1941 à Montferrer, Jean Forteroche va très vite parcourir le monde avec sa plume et s'imposer comme un des grands noms de la littérature française. Après "le Naufrage du Beyle", "le Noir et le Rouge" ou encore "la Revue des Quatres Mondes", vous allez décourvir le dernier ouvrage de Jean Forteroche, "Billet simple pour l'Alaska". Vous pourrez suivre et apprécier ici la publication du livre chapitre par chapitre, au rythme de la plume de Jean!</p>
+    </div>
+    
+</footer>
 
 </html>
