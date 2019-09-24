@@ -25,7 +25,6 @@
             </div>
         </div>
     </nav>
-
     <div class='banner'>
         <h1>Billet simple pour l'Alaska</h1>
         <h2>Ne ratez pas le nouveau roman choc de Jean Forteroche!</h2>

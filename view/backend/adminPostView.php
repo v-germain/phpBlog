@@ -2,7 +2,7 @@
 
 <?php ob_start(); ?>
 <h1>Modifier un billet</h1>
-<p><a href="index.php?action=admin"> Retour à la liste des billets </a></p>
+<p><a href="router.php?action=admin"> Retour à la liste des billets </a></p>
 <div class="card" style="width: auto!important; padding: 20px!important;">
     <h3>
         <?= htmlspecialchars($post['title']) ?>
@@ -15,7 +15,7 @@
 
 <?php $id = $post['id']; ?>
 
-<form action="index.php?action=editPost&idPost=<?php echo $id; ?>" method="post">
+<form action="router.php?action=editPost&idPost=<?php echo $id; ?>" method="post">
     <div>
         <label for="title">Titre</label><br />
     </div>
@@ -30,7 +30,7 @@
     </div>
     <div>
         <?php $id = $post['id'];
-        echo("<a class='btn btn-primary submitBtn' href=\"index.php?action=removePost&idPost=$id\"> Supprimer</a>"); ?>
+        echo("<a class='btn btn-primary submitBtn' href=\"router.php?action=removePost&idPost=$id\"> Supprimer</a>"); ?>
     </div>
 </form>
 

@@ -4,6 +4,11 @@ body {
     text-shadow: 0 0 3px black;
 }
 
+#adminBody {
+    background-image: linear-gradient(to bottom, #98CACB, #3C8C8E , #083E4A);
+    color: white;
+}
+
 header {
     width: 100%;
 }
@@ -29,10 +34,31 @@ div.banner {
     margin-bottom: 10px;
 }
 
+div.adminBanner {
+    background-image: url("../images/adminBanner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-shadow: 1px 0 1px black; 
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+
 nav {
     z-index: 1;
     position: fixed!important;
     width: 100%;
+}
+
+a.nav-link {
+    color: white;
 }
 
 div.card {

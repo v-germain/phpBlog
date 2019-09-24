@@ -1,14 +1,14 @@
 <?php
 
-require_once('model/PostManager.php');
-require_once('model/CommentManager.php');
+require_once(__DIR__ . '/../model/PostManager.php');
+require_once(__DIR__ . '/../model/CommentManager.php');
 
 function listPosts()
 {
     $postManager = new PostManager();
     $posts = $postManager->getPosts();
 
-    require('view/frontend/listPostsView.php');
+    require(__DIR__ . '/../view/frontend/listPostsView.php');
 }
 
 function post()
@@ -19,7 +19,7 @@ function post()
     $post = $postManager->getPost($_GET['id']);
     $comments = $commentManager->getComments($_GET['id']);
 
-    require('view/frontend/postView.php');
+    require(__DIR__ . '/../view/frontend/postView.php');
 }
 
 function addComment($postId, $author, $comment)

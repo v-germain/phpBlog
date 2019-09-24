@@ -27,7 +27,7 @@ class AdminManager extends Manager
         $removeComment = $db->prepare('DELETE FROM comments WHERE id =? AND reported=1');
 
         $removeComment->execute(array($postId));
-        header('Location: index.php?action=admin');
+        header('Location: router.php?action=admin');
     }
 
     public function restoreComment($postId)
@@ -36,7 +36,7 @@ class AdminManager extends Manager
         $restoreComment = $db->prepare('UPDATE comments SET reported = 0 WHERE reported = 1 AND id = ?');
         
         $restoreComment->execute(array($postId));
-        header('Location: index.php?action=admin');
+        header('Location: router.php?action=admin');
     }
 
     public function getAdminPosts()
@@ -63,7 +63,7 @@ class AdminManager extends Manager
         $removePost = $db->prepare('DELETE FROM posts WHERE id =?');
 
         $removePost->execute(array($postId));
-        header('Location: index.php?action=admin');
+        header('Location: router.php?action=admin');
     }
 
     public function editPost($postid, $newTitle, $newContent)
@@ -76,6 +76,6 @@ class AdminManager extends Manager
             'newTitle' => $newTitle,
             'postid' => $postid
         ));
-        header('Location: index.php?action=admin');
+        header('Location: router.php?action=admin');
     }
 }

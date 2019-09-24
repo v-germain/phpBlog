@@ -28,7 +28,7 @@
             </h4>
             <p class="card-text">
                 <?= substr($data2['content'], 0, 600) ?><br />
-                <em><a class="btn btn-primary" href="index.php?action=adminPostView&amp;id=<?= $data2['id'] ?>">Editer</a></em>
+                <em><a class="btn btn-primary" href="router.php?action=adminPostView&amp;id=<?= $data2['id'] ?>">Editer</a></em>
             </p>
         </div>
     <?php
@@ -40,7 +40,7 @@
 
 <section id="createPost" style = 'display : none'>
 
-    <form action="index.php?action=createPost" method="post">
+    <form action="router.php?action=createPost" method="post">
         <h2>Créer un billet</h2>
         <div>
             <label for="title">Titre</label><br />
@@ -69,8 +69,8 @@
             <p><strong><?= htmlspecialchars($data['author']) ?></strong> publié le <?= $data['comment_date'] ?></p>
             <p class="alert alert-light"><?= nl2br(htmlspecialchars($data['comment'])) ?></p>
         <?php $id = $data['id'];
-            echo ("<a class='btn btn-primary' href=\"index.php?action=restoreComment&idPost=$id\"> Restaurer</a>");
-            echo ("<a class='btn btn-danger' href=\"index.php?action=removeComment&idPost=$id\"> Supprimer</a>");
+            echo ("<a class='btn btn-primary' href=\"router.php?action=restoreComment&idPost=$id\"> Restaurer</a>");
+            echo ("<a class='btn btn-danger' href=\"router.php?action=removeComment&idPost=$id\"> Supprimer</a>");
         ?>
         </div>
         <?php

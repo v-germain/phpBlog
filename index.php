@@ -1,5 +1,5 @@
 <?php
-require('controller/frontend.php'); //a répartir dans if/elseif
+require(__DIR__ . '/controller/frontend.php');
 try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'listPosts') {

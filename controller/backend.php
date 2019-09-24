@@ -36,7 +36,7 @@ function addPost($title, $content)
        throw new Exception('Impossible de publier ce billet');
    }
    else {
-        header('Location: index.php');
+        header('Location: router.php?action=admin');
    }
 }
 
